@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jogo de Adivinhação de Bandeira</title>
+    <style>
+        #flag {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jogo de Adivinhação de Bandeira</h1>
+    <p>Qual é a bandeira deste país?</p>
+
+    <img id="flag" src="" alt="Bandeira do país">
+    <input type="text" id="resposta" placeholder="Digite o nome do país">
+    <button id="verificar">Verificar</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        const paisesBandeiras = {
+            'Brasil': 'img',
+            'Estados Unidos': 'bandeira_eua.png',
+            'França': 'bandeira_franca.png',
+            'Japão': 'bandeira_japao.png',
+            // Adicione mais países e suas bandeiras aqui
+        };
+
+        const flag = document.getElementById('flag');
+        const respostaInput = document.getElementById('resposta');
+        const verificarButton = document.getElementById('verificar');
+        const mensagem = document.getElementById('mensagem');
+
+        let paisAtual = '';
+        
+        function escolherPaisAleatorio() {
+            const paises = Object.keys(paisesBandeiras);
+            const indiceAleatorio = Math.floor(Math.random() * paises.length);
+            return paises[indiceAleatorio];
+        }
+
+        function iniciarJogo() {
+            paisAtual = escolherPaisAleatorio();
+            const bandeiraURL = paisesBandeiras[paisAtual];
+            flag.src = bandeiraURL;
+            respostaInput.value = '';
+            mensagem.textContent = '';
+        }
+
+        function verificarResposta() {
+            const respostaUsuario = respostaInput.value.trim();
+
+            if (respostaUsuario.toLowerCase() === paisAtual.toLowerCase()) {
+                mensagem.textContent = 'Correto! Você acertou a bandeira.';
+            } else {
+                mensagem.textContent = `Incorreto. A bandeira é do ${paisAtual}.`;
+            }
+        }
+
+        verificarButton.addEventListener('click', verificarResposta);
+
+        iniciarJogo(); // Inicie o jogo quando a página for carregada
+    </script>
+</body>
+</html>

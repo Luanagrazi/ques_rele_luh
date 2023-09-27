@@ -1,0 +1,31 @@
+
+
+
+.conteudoo {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.cardee {
+    background-color: #f1f1f1;
+    min-width: 250px;
+    margin: 10px;
+    height: 200px;
+    text-align: center;
+}
+
+.cardee img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para manter a proporção da imagem e preencher o espaço */
+}
+
+@media (min-width:1330px) {
+    .conteudoo {
+        justify-content: center;
+    }
+}

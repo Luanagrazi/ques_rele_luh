@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+
+
+  body {
+    font-family: Montserrat, Arial, sans-serif;
+   
+      
+   
+    
+  }
+  aside {
+    width: 44%;
+    height: 100vh;
+    position: fixed;
+    padding: 100px;
+    background: linear-gradient(to bottom, #17224c, #154e77,  #154e77,  #112839);
+   
+    color: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  #load {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    background: #3aff3a;
+    width: 0;
+    z-index: 1;
+  }
+  #load-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, #1a2657);
+    width: 100%;
+  }
+  h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 45px;
+  }
+  aside p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .active {
+    background-color: #eee;
+    color: black;
+  }
+  section {
+    background: #fff;
+    width: 60%;
+    float: right;
+    padding: 100px 100px 100px;
+    border-bottom: 1px solid #0d1bac;
+  }
+  section p {
+    padding: 20px;
+  /*   border: 4px solid transparent; */
+    background: #eee;
+    border-radius: 6px;
+    margin-top: 20px;
+    max-width: 600px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  section p:hover {
+    cursor: pointer;
+  }
+  
+  section h2 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+    max-width: 600px;
+    margin-bottom: 30px
+  }
+  section h3 {
+    color: #32bf32;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  section button {
+    border: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    background: #333;
+    color: #666;
+    font-family: "Montserrat", Arial, sans-serif;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 6px;
+    margin-top: 30px;
+    cursor: pointer;
+    background: #3aff3a;
+    color: #333;
+    transition: all 0.2s linear;
+  }
+  section button[disabled] {
+    background: #ccc;
+    color: #eee;
+    transition: all 0.2s linear;
+  }
+  
+  #bg-modal {
+    transition: all 0.3s ease;
+    font-size: 30px;
+    background: rgba(0,0,0,.9);
+    color: #fff;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 1199px) {
+    aside + section {padding-top: 50px}
+    aside, section {width: 100%}
+    aside {height: initial; top: 0; left: 0; padding: 60px 20px 40px; text-align: center; display: block; position: sticky;}
+    section {padding: 200px 15px 60px; margin: 0 auto; max-width: 500px; float: none;}
+    h1 {font-size: 25px;}
+  }
+  
+  @media screen and (max-width: 465px) {
+    h1 {font-size: 20px;}
+    section h2 {font-size: 20px;}
+    section p {padding: 15px; font-size: 13px; line-height: 1.5;}
+    section button {font-size: 13px;}
+  }
+  
+  
+  
+  
+  
