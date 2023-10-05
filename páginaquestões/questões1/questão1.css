@@ -5,6 +5,10 @@
     
   }
 
+a {
+  text-decoration: none;
+}
+
 
   body {
     font-family: Montserrat, Arial, sans-serif;
